@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.player {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.player div {
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.player div div {
+    min-width: 100%;
+    min-height: 3px;
+    background-color: #0a0d11;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    pointer-events: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    z-index: 3;
+}
+
+.player input {
+    width: 100%;
+    max-height: 3px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 8px;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    background: #ff9966;
+    z-index: 0;
+    -webkit-transition: width 0.2s ease;
+    transition: width 0.2s ease;
+    /* opacity: 0; */
+}
+
+.player input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    opacity: 0;
+    height: 36px;
+    width: 1px;
+    border-radius: 3px;
+    background: #000;
+    cursor: pointer;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+.player input::-moz-range-thumb {
+    height: 36px;
+    width: 1px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* All the same stuff for IE */
+.player input::-ms-thumb {
+    height: 36px;
+    width: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0;
+
+}
+
+.volume {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 0 0.5rem;
+    max-height: 2px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #adcaf2;
+    border-radius: 8px;
+    outline: none;
+    overflow: hidden;
+}
+.song_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px auto;
+}
+.song{
+    background: #ddd;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+.selected_song{
+    background: #0a0d11;
+    color: #fff;
+}
